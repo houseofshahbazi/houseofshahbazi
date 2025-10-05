@@ -166,9 +166,14 @@
   </main>
 
   <footer class="site-footer">
-    <footer style="text-align: center; padding: 20px; font-size: 13px; color: gray; border-top: 1px solid #444; margin-top: 40px;">
-  © 2025 House of Shahbazi. All rights reserved.<br>
-  Gulf Standard Time (GST, UTC+4) | Sama Tower — Office 104, Sheikh Zayed Road, Trade Centre 1, Dubai, UAE<br>
+  <p style="font-size: 13px; color: gray; line-height: 1.6;">
+    © <span id="y"></span> House of Shahbazi — All Rights Reserved.<br>
+    <i>Disclaimer:</i> Certain initiatives described on this website, including joint ventures or project references, may be in preliminary stages (LOI/MOU) and are disclosed for informational purposes only. They do not represent public offers, binding commitments, or finalized agreements.<br>
+    <i>Note:</i> Incoterms® is a registered trademark of the International Chamber of Commerce (ICC).<br>
+    <i>Time Zone:</i> Gulf Standard Time (UTC+4).
+  </p>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</footer>
   <i>Incoterms® is a registered trademark of the International Chamber of Commerce (ICC).</i><br>
   <a href="#" style="color: gray; text-decoration: underline;">Privacy Policy</a><br>
   <small>Disclaimer: Certain initiatives described on this website, including joint ventures or project references, may be in preliminary stages (LOI/MOU) and are disclosed for informational purposes only.</small>
@@ -176,4 +181,5 @@
 </body>
 
 </html>
+
 
