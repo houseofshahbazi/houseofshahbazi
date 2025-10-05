@@ -1,0 +1,111 @@
+/* ==== THEME ==== */
+:root{
+  --green:#0a1f1a;        /* fundal verde inchis */
+  --green-2:#0f2a22;      /* gradient top */
+  --panel:#102720;        /* card */
+  --stroke:#1b3c31;
+  --gold:#d4af37;         /* auriu royal */
+  --text:#e8e6cf;         /* text deschis */
+  --muted:#c9c6b0;
+  --max:1100px;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--green);color:var(--text);font-family: Georgia, "Times New Roman", serif;line-height:1.65}
+
+/* ==== HEADER ==== */
+.hero{
+  text-align:center;
+  padding:60px 20px 36px;
+  background:linear-gradient(180deg,var(--green-2) 0%, var(--green) 100%);
+  border-bottom:1px solid var(--stroke);
+}
+.hero-title{
+  margin:0 0 12px;
+  font-size: clamp(38px, 5.5vw, 58px);  /* MAI MARE */
+  color:var(--gold);
+  letter-spacing:1.2px;
+  text-transform:uppercase;
+}
+.hero-logo{
+  width: clamp(170px, 24vw, 240px);     /* LOGO MAI MARE */
+  height:auto;
+  margin:6px 0 8px;
+  display:inline-block;
+}
+.hero-subtitle{
+  color:var(--gold);
+  font-size: clamp(18px, 2.6vw, 24px);  /* MOTTO MAI MARE */
+  letter-spacing:1px;
+  margin:0 0 16px;
+}
+.hero-actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+
+/* ==== BUTTONS ==== */
+.btn{display:inline-block;padding:12px 20px;border-radius:999px;text-decoration:none;border:1px solid var(--gold)}
+.btn-gold{color:var(--green);background:var(--gold)}
+.btn-gold:hover{filter:brightness(1.05)}
+.btn-outline{color:var(--gold);background:transparent}
+.btn-outline:hover{background:rgba(212,175,55,.08)}
+
+/* ==== LAYOUT ==== */
+.container{max-width:var(--max);margin:0 auto;padding:0 20px}
+.section{padding:44px 0}
+.section-title{
+  color:var(--gold);
+  font-size:26px;
+  margin:0 0 18px;
+  display:inline-block;
+}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+
+@media (max-width:900px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+}
+
+/* ==== CARDS ==== */
+.card{
+  background:var(--panel);
+  border:1px solid var(--stroke);
+  border-radius:14px;
+  padding:18px 18px;
+}
+.card .card-title{margin:0 0 10px;color:var(--gold);font-size:18px}
+
+/* Intro block */
+.intro p{margin:8px 0;text-align:left}
+
+/* Bullets */
+.bullet{margin:0;padding-left:18px;text-align:left}
+.bullet li{margin:6px 0}
+
+/* Mini steps */
+.mini{padding:16px}
+.mini-title{margin:0 0 6px;color:var(--gold);font-size:18px}
+
+/* People */
+.person{display:flex;flex-direction:column;align-items:center;text-align:center}
+.person-photo{
+  width:190px;height:235px;object-fit:cover;
+  border:2px solid var(--gold);border-radius:10px;margin-bottom:12px
+}
+.person-name{margin:4px 0 2px;font-weight:700}
+.person-role{margin:0 0 10px;color:var(--gold);font-weight:700}
+.person-bio{margin:0;color:var(--muted)}
+
+/* Contact */
+.contact-wrap{align-items:start}
+.contact-form label{display:block;margin:8px 0;text-align:left}
+.contact-form input,.contact-form textarea{
+  width:100%;padding:10px 12px;background:#0e241e;color:var(--text);
+  border:1px solid var(--stroke);border-radius:10px;outline:none
+}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--gold)}
+.form-status{color:var(--muted);margin-top:8px}
+.contact-card .hint{color:var(--muted);margin-top:8px}
+.link{color:var(--gold);text-decoration:none;border-bottom:1px dotted var(--gold)}
+.link:hover{opacity:.9}
+
+/* Footer */
+.site-footer{margin-top:26px;border-top:1px solid var(--stroke);text-align:center;padding:16px;color:#a9a68f;font-size:13px}
